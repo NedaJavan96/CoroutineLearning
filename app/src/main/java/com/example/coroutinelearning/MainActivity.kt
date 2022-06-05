@@ -3,6 +3,7 @@ package com.example.coroutinelearning
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.coroutinelearning.databinding.ActivityMainBinding
+import com.example.coroutinelearning.runblocking.RunBlockingSample
 import com.example.coroutinelearning.sequential.SequentialTasksWithCoroutine
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val sequentialTasksWithCoroutine = SequentialTasksWithCoroutine()
-        sequentialTasksWithCoroutine.startSequentialProcess()
+        //***Sequential tasks
+        /*     val sequentialTasksWithCoroutine = SequentialTasksWithCoroutine()
+             sequentialTasksWithCoroutine.startSequentialProcess()*/
+
+        //***Run blocking
+        val runBlockingSample = RunBlockingSample()
+        runBlockingSample.startSequentialProcess()
+
     }
 }
